@@ -1,0 +1,21 @@
+.chatside
+ .chatside__top
+  .chatside__top--box
+   %p.chatside__top--box__left
+    masa
+   %ul.chatside__top--box__menu
+    %li.chatside__top--box__user
+     =link_to "#" do
+      = icon('fas','edit')
+    %li.chatside__top--box__edit
+     =link_to "#" do
+      = icon('fas','cog')
+   
+ 
+ 
+ .groups 
+  = link_to "#", class:"group" do
+   %p.group--name
+    Expert
+   %p.group--message
+    まだメッセージはありません
