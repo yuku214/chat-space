@@ -1,33 +1,21 @@
 .chatmain
- .chatmain__top
-  %p.chatmain__top--text
-   text
-  %p.chatmain__top--member
-   Member : masa
-  =link_to "#" , class:"chatmain__top--edit" do
-   edit
- .chatmain__middle
-  %ul.chatmain__middle--content
-   %li.chatmain__middle--content--1
-    masa
-   %li.chatmain__middle--content--2
-    2019/2/11(Tue) 17:00
-  %p.chatmain__middle--talk1
-   hello!
-  %ul.chatmain__middle--content2
-   %li.chatmain__middle--content2--1
-    masa
-   %li.chatmain__middle--content2--2
-    2019/2/11(Tue) 17:10
-  %p.chatmain__middle--talk1
-   今日は雨な気がする
- .chatmain__bottom
-  %form
-   .text-box
-    %input{type: "text", class: "text-box__text",placeholder:"type a message"}
-    %label{class: "text-box__image"}
-     = icon('fas','image')
-     %input{type: "file",class: "text-box__image__file"}
-   %input{type:"submit", class: "submit-btn"}
-        
-     
+  .chatmain__top
+    %p.chatmain__top--text
+      = @group.name
+    %p.chatmain__top--member
+      Member:
+      - @group.users.each do |user|
+        = user.name
+    =link_to edit_group_path(@group) , class:"chatmain__top--edit" do
+      edit
+  .chatmain__middle
+    = render @messages
+  .chatmain__bottom
+    .text-box
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'text-box__text', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'form__mask__file'
+        = f.submit 'Send', class: 'submit-btn'
