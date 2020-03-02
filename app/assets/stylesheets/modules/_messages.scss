@@ -110,90 +110,78 @@
   &__middle {
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
-  &--content{
-   margin-left: 40px;
-   padding-top: 35px;
-   display: flex;
-  &--1{
-   color: #333333 ;
-   font-size: 16px;
-   margin-right: 5px;
-  }
-  &--2{
-   color: #999999;
-   font-size: 12px;
-  }
-  }
-  &--talk1{
-   color: #434A54;
-   font-size: 14px;
-   margin-top: 12px;
-   margin-left: 40px;
-  }
-  &--content2{
-    margin-left: 40px;
-   padding-top: 46px;
-   display: flex;
-  &--1{
-    color: #333333 ;
-   font-size: 16px;
-   margin-right: 5px;
-  }
-  &--2{
-    color: #999999;
-    font-size: 12px;
-   }
-
-  }
+    overflow: scroll;
+  .message{
+      
+    .upper-message{
+      margin-left: 40px;
+      padding-top: 35px;
+      display: flex;
+      &__user-name{
+        color: #333333;
+        font-size: 16px;
+        margin-right: 9px;
+      }
+      &__date{
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    .lower-message{
+      &__content{
+        color: #434A54;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-left: 40px;
+      }
+    }
   }
 
-  &__bottom {
-    background-color:#d2d2d2;
+  
+  }
+
+  &__bottom{
+    background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-     .text-box{
-       width: 100%;
-       display: flex;
-       position: relative;
-      &__text{
+    .text-box{
+      position: relative;
+    form{
+      display: flex;
+      position: relative;
+      .form-text{
         height: 50px;
         width: 100%;
         color: #434a54;
         border-style: none;
         padding: 0 0px 0 10px;
-
-      
-       .form__mask{
-       
-       &__image{
-         cursor: pointer;
-         position: absolute;
-         right: 140px;
-         top: 10px;
-         font-size: 20px;
-         display: none;
-       
-       &__file{
-         display: none;
-       }
       }
-       
+      .form__mask{
+        &__image{
+          cursor: pointer;
+          font-size: 20px;
+          position: absolute;
+          right: 140px;
+          top: 10px;
+        
+        &__file{
+          display: none;
+        }
+
+        }
+      }
+      .submit-btn{
+        background-color: #38aef0;
+        height: 50px;
+        margin-left: 15px;
+        width: 100px;
+        text-align: center;
+        padding: 0px 30px;
+        color: white;
+        cursor: pointer;
       }
     }
-     }
-
-     .submit-btn{
-       background-color: #38aef0;
-       height: 50px;
-       margin-left: 15px;
-       width: 100px;
-       text-align: center;
-       padding: 0px 30px;
-       color: white;
-       cursor: pointer;
-
-
-     }
+  } 
     
-  }
+ }
 }

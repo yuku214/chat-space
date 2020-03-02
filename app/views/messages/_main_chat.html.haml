@@ -13,9 +13,9 @@
   .chatmain__bottom
     .text-box
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'text-box__text', placeholder: 'type a message'
+        = f.text_field :content, class: 'form-text', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
             = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'form__mask__file'
+            = f.file_field :image, class: 'form__mask__image__file'
         = f.submit 'Send', class: 'submit-btn'
