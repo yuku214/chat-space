@@ -7,7 +7,7 @@
       - @group.users.each do |user|
         = user.name
     =link_to edit_group_path(@group) , class:"chatmain__top--edit" do
-      edit
+      Edit
   .chatmain__middle
     = render @messages
   .chatmain__bottom

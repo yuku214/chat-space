@@ -96,13 +96,14 @@
   }
   &--edit{
     color: #38aef0;
-    font-size: 16px;
-    border: solid;
-    margin-right: 40px;
-    margin-top: 28px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 38px;
+    border: solid 1px;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 20px;
+    margin-top: 30px;
+    position: absolute;
+    right: 40px;
+    text-decoration: none;
 
   }
     
@@ -133,6 +134,11 @@
         color: #434A54;
         font-size: 14px;
         margin-top: 5px;
+        margin-left: 40px;
+      
+        
+      }
+      &__image{
         margin-left: 40px;
       }
     }
